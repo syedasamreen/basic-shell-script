@@ -1,0 +1,489 @@
+###### files #####
+Files	tar · pv · cat · tac · chmod · grep ·  diff · sed · ar · man · pushd · popd · fsck · testdisk · seq · fd · pandoc · cd · $PATH · awk · join · jq · fold · uniq · journalctl · tail · stat · ls · fstab · echo · less · chgrp · chown · rev · look · strings · type · rename · zip · unzip · mount · umount · install · fdisk · mkfs · rm · rmdir · rsync · df · gpg · vi · nano · mkdir · du · ln · patch · convert · rclone · shred · srm
+#### processes ####
+Processes	alias · screen · top · nice · renice · progress · strace · systemd · tmux · chsh · history · at · batch · free · which · dmesg · chfn · usermod · ps · chroot · xargs · tty · pinky · lsof · vmstat · timeout · wall · yes · kill · sleep · sudo · su · time · groupadd · usermod · groups · lshw · shutdown · reboot · halt · poweroff · passwd · lscpu · crontab · date · bg · fg
+
+##### networking ######
+Networking==>	netstat · ping · traceroute · ip · ss · whois · fail2ban · bmon · dig · finger · nmap · ftp · curl · wget · who · whoami · w · iptables · ssh-keygen · ufw
+
+######
+cd~ : home directory
+cd.. : go back path
+cd : go forward path
+cd - : go to where it left
+pwd : present working directory
+ls : list
+cp : copy
+cp -a file/other file name: copy recursivly
+id : id of user
+mv filename1 filename2: move
+rmdir: remove empty dirctory
+rm filename/filename : remove with file 
+echo : execute
+cat : concatinate
+cat filname: show content
+cat>filename: create a new file and writes the content and cntrl+D to save
+cat file1 file2>file3: cancatinate two file in one
+cal : calender
+date : date and time
+less : show content in another page
+less filename: To see and read file
+more filename: To see and read file(if content is beyond the screen size)
+mkdir : make direcotory
+touch : create file
+vi filname : creaing file in vi editor
+nl filename: line numbser
+wc filename : counting words in file 
+chmod : change mode of file
+chmod u=r filname: read only to user.
+chmod u=w filename
+chmod +x filename.sh
+excution file: ./ filename.sh or sh filename.sh
+passwd : change the password
+whoami : who am i
+users : gives users
+who : list of users
+w:all details of user
+man + help : get help and details
+ls -a : list hidden files
+ls -R
+ls -lart: list of information order on time basis
+ls -lSr : list the information on the basis of size
+ls -lS: list big to small
+ls -ltr : list of before nad after certain time
+ls -l : longform information
+ls -r
+ls -t
+history
+exit: exit the  sudo user to user mode
+#### keyboard shortcut #######
+
+cntrl + d: goto root to user directory
+ctrl + a : go to begining of the line
+cntrl + e: go to end of the line
+ctrl + d : to del whole thing
+Alt+D: Delete all characters after the cursor on the current line
+Ctrl+H or Backspace: Delete the character before the cursor.
+
+Ctrl+W: Cut the word before the cursor, adding it to the clipboard.
+ctrl + k : to del after the cursor line
+ctrl + u : to del before the cursor line
+ctrl + y : reverse deleted content
+ctrl + a & ctrl +k : to del whole line
+Ctrl+C: Interrupt (kill) the current foreground process running in in the terminal.
+Ctrl+Z: Suspend the current foreground process running in bash. 
+Ctrl+D: Close the bash shell. This sends an EOF (End-of-file) marker to bash, 
+Ctrl+L: Clear the screen.
+Ctrl+S: Stop all output to the screen
+Ctrl+Q: Resume output to the screen after stopping it with Ctrl+S.
+Alt+B: Go left (back) one word
+Ctrl+B: Go left (back) one character.
+Alt+F: Go right (forward) one word.
+Ctrl+F: Go right (forward) one character.
+Ctrl+XX: Move between the beginning of the line and the current position of the cursor. 
+Alt+T: Swap the current word with the previous word
+Ctrl+T: Swap the last two characters before the cursor with each other. Y
+Ctrl+_: Undo your last key press. 
+Alt+U: Capitalize every character from the cursor to the end of the current word, 
+Alt+L: Uncapitalize every character from the cursor to the end of the current word, 
+Alt+C: Capitalize the character under the cursor. Your cursor will move to the end of the current word.
+Tab: Automatically complete the file, directory, or command you’re typing.
+Ctrl+P or Up Arrow: Go to the previous command in the command history. 
+Ctrl+N or Down Arrow: Go to the next command in the command history.
+
+Alt+R: Revert any changes to a command you’ve pulled from your history if you’ve edited it.
+Ctrl+R: Recall the last command matching the characters you provide. 
+Ctrl+O: Run a command you found with Ctrl+R.
+Ctrl+G: Leave history searching mode without running a command.
+set -o vi
+set -o emacs
+#############################################################
+
+find ____
+find .
+find . -ctime-2: creation time
+find . -mtime+2: more then 2 days
+find . -mmin-2
+halt : brings system down immediately
+init 0: power off
+init 6: reboots
+poweroff: shutdown
+reboot : reboots
+
+grep : join commands
+grep: grep pattern file(s)[g/re/p:globally search for a regular expression and print all lines containing it”.]
+[
+^pattern : matches which start with 1st ltr
+pattern$ : matches wich ends with ltr
+-v: print all lines that do not match pattern
+-n : Prints the matched line and its line number.
+-I:Prints the matched line and its line number Case sensitive.
+-c: Prints only the count of matching lines case insensitive.
+-i: Matches either upper or lowercase.
+-E or egrep: only include the mathches
+grep pattern filenale: shows all pattern matches
+grep pattern *: matches in every file
+gre -l pattern *: only names of the files
+grep -il pattern *: case insensitive
+grep -A2 pattern file name: above and belowe line of pattern
+grep -B2 pattern filename
+grep -C2 pattern filename
+]
+
+comm file1 file2 : compare the files
+comm -23/ -13/ -12 file file2: non matching items / non matching file2 / only matching
+
+Diff:taking difference between two file and direcotory
+diff -r directory otherdirectory | less
+diff -rbw directory other directory | less 
+diff filename1 filename2
+diff filenames | less: to see the changes
+sed 're pattern' filename: to change the whole file with pattern 
+diff -bw filename: ignoring white space changes
+
+
+cal :calender
+cal month year: month of the year calender
+date : gives date and time
+date --date="yesterday"
+sort :command arranges lines of text alphabetically or numerically.
+[-n: Sorts numerically (example: 10 will sort after 2), igno
+-r:Reverses the order of sort.
+-f:Sorts upper and lowercase together.
++x:Ignores first x fields when sorting.]
+
+pg and more:displays stops once is full text, to read sorted listing.
+
+
+%n: refered to as job number and jon control or process control
+* : to match
+? : single charector
+.file : hidden file
+.: represent current direcotory
+.. : represensts parent direcotory
+/ : root directory path
+
+cat /etc/os-release: os version info
+
+lsb_release -a: os version info
+
+hostnamectl: os version info
+
+uname -r : kernel version info
+
+grep '^VERSION' /etc/os-release : only version info
+
+remote vm connection: ssh username@server_name
+
+PS1 variable: can change anything we put [ \t: current_time,\u:user name,\d:date,\n:newline, \s:current shell envir,\W:working directory,\w:full path of wd,\#:command number,\$:uid is 0,\h:hostname]
+
+PS2 variable: 
+ps : shows processs runing
+sleep: sleep for given time
+
+fg: forground run processes
+bg:backgorund run processes
+
+pr option(s) filename(s): printer command
+
+lp and lpr: prints file into paper
+
+lpstat and lpq: shows whats in printer queue 
+
+cancel and lprm: terminate the printing request and lprm terminates all lpr request
+ 
+ PID: process ID [foreground process ls file*.txt, background process ls file*.txt &]
+ ps(process status):
+[-a: Shows information about all users
+-x: Shows information about processes without terminals	
+-u: Shows additional information like -f option
+-e:Displays extended information]
+
+kill: stopping process [kill pid/ppid]
+
+ping: sends echo request to host available on the netowrk.
+
+ftp filename
+[put filename:Uploads filename from the local machine to the remote machine.
+get filename:Downloads filename from the remote machine to the local machine.
+mput file list:Uploads more than one file from the local machine to the remote machine.
+mget file list:Downloads more than one file from the remote machine to the local machine.
+prompt off:Turns the prompt off. By default, you will receive a prompt to upload or download files using mput or mget commands.
+prompt on:Turns the prompt on.
+dir: Lists all the f iles available in the current directory of the remote machine.
+cd dirname: Changes directory to dirname on the remote machine.
+lcd dirname: Changes directory to dirname on the local machine.
+quit:Helps logout from the current login.]
+
+
+######## Maninpulating files #########
+
+less filename: to open file
+head !$ : show the 1st 10 lines
+head -n int/5 filename: shows 1st 5 lines/  mentioned number of lines 
+tail -10/int filename: showa last 10 lines/ mentiones number of lines.
+tail -10 filename | head -2: first 2 lines of last 10
+wc filename : word count gives all the details of file
+wc -l filename : gives number of lines of file
+head -50 filename | tail -5: first 50 of last 5 lines
+
+split : splitting the data
+shuf: shufle the whole file
+shuf ipmisensor_dt.txt | split -l 30:  shuffle and splitted and created new x files
+cat filename: shows whole file content
+tac filename: shows reversly the whole file
+tac filename > reverse filename: reverse the tac
+rev filename: swap content from the file(left swap)
+rev filename | sort : reversed and soreted the file
+rev filename | sort | rev : again reversed and sorted
+sort filename | less: spaces, symboles, numercal 1st and alphabetic oreder
+sort -n i:1 filename
+sort filename | uniq | less : gives all the unique lines
+sort filename | uniq -c | liss : gives count of the unique lines
+sort filename | uniq -c |sort -n | liss : gives count of the unique number of  lines
+grep "^pattern" filename | less
+grep "^pattern\." filename | less
+sort filename | uniq -c | sort -n | tac | less
+sort filename | uniq -c | wc -l
+wc -l !:1 : gives command and number of lines
+uniq filename : removes cointinous duplicats
+#################
+
+for debugging and variables
+echo:
+echo i\'m fine : gives i'm fine
+alias hi='echo how r u': creates a variable called hi
+unalias hi : delet the created variable
+grep , filename > commafile | less: shows all with comma lines
+grep = filename > commafile | less: shows all with equal lines
+cut -d= -f2 filenale | less : deliemted equal sign
+grep direcortory filename | cut -d" " -f5 |less
+cut -d" " -f1,2,3
+cut -d$'\t' -f1,2,3: tab delimeted file
+cut -d$' ' -f4-
+[head,tail,shuf,split,cat,tac,rev,wc,-l,uniq,echo,cut,grep,less,sort,diff,]
+
+####### other then pandas #######
+awk and sed
+grep "}" filename | grep \" | less
+grep "}" filename | grep \" | less | rev | less
+grep "}" filename | grep \" | less | rev | cut -d\" -f2 | less
+grep "}" filename | grep \" | less | rev | cut -d\" -f2 | less
+ or 
+grep "]" !:2 | awk '{print $0}' | less
+grep "=" filename | awk '{print $1}' | less
+grep "=" filename | awk -F\" '{print $1}' | less
+grep "=" filename | awk -F\" '{print NF $1}' | less
+grep "=" filename | awk -F\" '{print NF $NF $1}' | less
+awk /=/  filname
+awk -F\" '{print $1}' | less
+awk -F\" '{print NF $NF $1}' | less
+awk -F\" '{print NF $NF-1}' | less
+awk -F\" /pattern/'{print $(NF-1),(NF-3)' file name | less
+awk -F\" /pattern/'{print $(NF-1)+(NF-3)' file name | less
+grep = filename | awk -F\" 'BEGIN{a=0}{a+= $(NF-1)+$(NF-3)}END{print a}'
+
+sed : allows u to edit line , find and replace
+grep = filename | sed 's/cpu//g' | less
+grep = filename | sed 's/cpu//' | less
+grep = filename | sed 's/"/:/g' | less
+grep = filename | sed 's|"|:|g' | less
+sed 's/parameter_my_variable/5.0/' mycode.py or mycode.c or anything
+
+### brodning selection and combing command's
+ls cat* : list all files starts with cat
+ls nt*.py* : list all files strts with and ends with 
+ls [a-z]* : list all a to z files
+ls [A_Z]*: list all A to Z files
+ls [abc]*: list a,b,c files
+ls [1-9]* : list files starts with number
+ls file_n{any number}*
+ls cat-filename1 filename2 filename3
+!$: gives used file
+!:1 : gives last 1 file
+!:2 : gives last 2 file
+ls | grep pattern or word: list out the given patter files
+ls | grep -v word : list out which is not connect the word
+ls | grep -E word : list out which contains only that file
+ls | grep -E word > newfilename: list out n saved in newfile
+ls p* newfilename : wich appends adn over writes the all p files
+grep word filename > newfile: word in file name and save newfile
+
+##### pousing and restarting commands
+sleep : sleep processes
+screen : go to back in terminal
+screen -r : detach the screen 
+
+#### variables
+variable_name=variable_value/expression
+accessing variable: prefix with $
+read only: readonly_name
+unsetting variable: unsetting_variable_name
+a=kdkkfk
+echo $a
+kdkkfk
+
+$$ : process id
+$# : number of parameter
+$0 : displays file name
+$n : decimal number parameters in oreder
+$* : display double qouted parameter
+$? : displays exit status{ returns 0 if excuted succeful ow non zero}
+
+
+ls $var : gives directory/ files using variable
+ls $aDS_books
+ls ${a}DS_books
+
+
+### for loop
+for i in variable; do somthing; echo variable; done
+
+if statetments
+if [[ -n $a ]]; then echo h ; fi
+if [[! -z $a]]; then echo hi ; fi
+
+commpressing file
+du -s filename: gives disk usage
+tar -cvf newfile.tar path/
+tar -xf newfile.tar
+tar -cf filename  path*
+tar -czf  newfile.tgz path/
+tar -xzf newfile.tzf path
+zip newfile.zip f1 f2 f3
+unzip file.zip
+gunzip newfile.tar.gz
+filename{.tar}: expand the extention
+tar -czvf file path
+
+define array
+array_name[index]=value1
+array_name[index]=value2
+----
+array_name=(value1 value2 value3....)
+array_name=([index]=value1 [index]=value2 [index]=value3..)
+access elements
+${array_name[index]}
+${array_name[@]}
+${array_name[*]}
+${array_name[@]:start_index}
+${array_name[@]:start_index:no_of_elements}
+
+
+input from keyboard
+read
+read variable_name
+
+output
+echo string
+
+## arithmetic operator
++,-,/*,/
+Relationale operator
+< : -lt
+> : -gt
+>= : ge
+<= : -le
+==: -eq
+!= : -ne
+
+## boolean operator
+! : negation
+-o : OR
+-a : and
+
+syntax : [operand operator operand]
+
+#### conditional statements......
+if condition
+then 
+    statements..
+fi (ends the condition statements)
+
+if condition
+then 
+    statements..
+else 
+    statments..
+if
+
+if condition
+then 
+    statements..
+elif condition
+then
+     statements
+else 
+    statments..
+fi
+
+
+### multiway slection 
+case value in
+1)label1 statements ;;
+2)label2 statments ;;
+* statemnets ;;
+esac
+
+value: word/value / expression
+label: value / word/expression
+;; : terminating control from case
+
+
+## iterative statements
+loop variable initialization, condition, updation of loop variables.
+
+syn1 : for variable in val1 val2 val3...
+      do 
+        commands
+      done
+syn2 : for variable in $(seq start diff stop)
+       do
+          commnads
+       done
+syn3: for variable in${array_name[@]}
+      do
+        commands
+      done
+syn4: for variable in {val1 val2..}
+      do
+          commnads
+       done
+syn5: for (( initializatio ; contition ; updation )) 
+ 
+ 
+ while loop: loop variable initialization, condition, updation of loop variables, ther is no curly braces
+ syn: while condition
+      do 
+      commands
+      updation loop var
+      done
+      
+ until loop: loop variable initialization, condition, updation of loop variables, reverse of while loop. 
+ syn: until condition
+      do 
+      commands
+      updation loop var
+      done
+      
+### break and continue
+syn1: while condition
+     do
+       statements
+       break
+       statements
+     done
+    
+syn2: while condition
+      do 
+        statements
+        continue
+        statements
+      done
+      
+## functions: code reusability
+function function_name()
+{
+list of commands
+}         
+
