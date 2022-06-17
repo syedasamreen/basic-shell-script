@@ -1,0 +1,22 @@
+
+cd
+pwd
+ls
+cp
+mv
+rm
+echo
+cat
+less
+grep
+mkdir
+touch
+chmod
+man + help
+ls -a
+ls -R
+ls -lart
+ls -l
+ls -r
+ls -t
+history
